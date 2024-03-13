@@ -8,12 +8,18 @@ import Card from "./components/Card";
 import Countdown from "./components/Countdown";
 import { Player } from "@lottiefiles/react-lottie-player";
 
+interface CardsOpenState {
+  countdown: boolean;
+  location: boolean;
+  invitati: boolean;
+}
+
 function App() {
   const [invitationOpen, setInvitationOpen] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [hideLetter, setHideLetter] = useState(false);
   const [startFade, setStartFade] = useState(false);
-  const [cardsOpen, setCardsOpen] = useState({
+  const [cardsOpen, setCardsOpen] = useState<CardsOpenState>({
     countdown: false,
     location: false,
     invitati: false,
@@ -38,7 +44,7 @@ function App() {
     }, 3000);
   };
 
-  const toggleCard = (cardName) => {
+  const toggleCard = (cardName: keyof CardsOpenState) => {
     setCardsOpen((prevState) => ({
       ...prevState,
       [cardName]: !prevState[cardName],
