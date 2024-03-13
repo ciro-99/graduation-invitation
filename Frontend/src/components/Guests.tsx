@@ -17,9 +17,12 @@ const Guests = ({ guests, handleUpdate }: Props) => {
 
   const togglePartecipa = async (id: string, participate: boolean) => {
     try {
-      const response = await axios.put(`http://localhost:9000/update/${id}`, {
-        participate,
-      });
+      const response = await axios.put(
+        `https://graduation-invitation-backend.onrender.com/update/${id}`,
+        {
+          participate,
+        }
+      );
       const updatedInvitati = response.data;
       setInvitati(updatedInvitati);
       handleUpdate();

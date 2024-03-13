@@ -38,14 +38,14 @@ const CardGuests = ({
 
   const handleUpdate = () => {
     axios
-      .get<Guest[]>("http://localhost:9000/")
+      .get<Guest[]>("https://graduation-invitation-backend.onrender.com/")
       .then((response) => setGuests(response.data))
       .catch((error) => console.error(error));
   };
 
   useEffect(() => {
     axios
-      .get<Guest[]>("http://localhost:9000/")
+      .get<Guest[]>("https://graduation-invitation-backend.onrender.com/")
       .then((response) => setGuests(response.data))
       .catch((error) => console.error(error));
   }, []);
