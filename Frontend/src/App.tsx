@@ -7,6 +7,7 @@ import { Container } from "react-bootstrap";
 import Card from "./components/Card";
 import Countdown from "./components/Countdown";
 import { Player } from "@lottiefiles/react-lottie-player";
+import CardGuests from "./components/CardGuests";
 
 interface CardsOpenState {
   countdown: boolean;
@@ -146,13 +147,16 @@ function App() {
                 isOpen={cardsOpen.location}
               />
             </div>
-            <div onClick={() => toggleCard("invitati")}>
-              <Card
+            <div
+              onClick={() => {
+                toggleCard("invitati");
+              }}
+            >
+              <CardGuests
                 title="🌝 Invitati"
                 text=""
-                buttonText="Scopri se sei in lista!"
+                buttonText="Conferma la tua presenza!"
                 icon="IoMdPersonAdd"
-                href=""
                 isOpen={cardsOpen.invitati}
               />
             </div>
