@@ -139,10 +139,10 @@ function App() {
             >
               <Card
                 title="📍 Location"
-                text="Ristorante bellissimo!"
+                text="Villa Andrea di Isernia - Via San Vito, 190, 80056 Ercolano NA"
                 buttonText="Indicazioni"
-                href="https://www.google.it/maps/preview"
-                srcImg="https://media-cdn.tripadvisor.com/media/photo-s/0b/79/a9/97/by-the-sea-restaurant.jpg"
+                href="https://maps.app.goo.gl/rvCPn9og6tWudtyq6"
+                srcImg="/src/assets/location.jpg"
                 icon="FaMapSigns"
                 isOpen={cardsOpen.location}
               />
