@@ -67,7 +67,7 @@ const CardGuests = ({
   }, [guests]);
 
   return (
-    <div className="card mb-3 text-start" style={{ width: "300px" }}>
+    <div className="card mb-3 text-start" style={{ width: "350px" }}>
       {isOpen && srcImg && <img src={srcImg} className="card-img-top" />}
       <div className="card-body">
         <h5 className="card-title">{title}</h5>

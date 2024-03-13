@@ -66,7 +66,7 @@ function App() {
       {invitationOpen && (
         <div className="row zoom-out">
           <div className="col-sm-6 mb-sm-0 p-0">
-            <div className="col-sm-6 mb-3 mb-sm-0" style={{ width: "300px" }}>
+            <div className="col-sm-6 mb-3 mb-sm-0" style={{ width: "350px" }}>
               <div className="card">
                 <div className="card-body">
                   <h5
@@ -100,7 +100,7 @@ function App() {
             <div
               onClick={() => toggleCard("countdown")}
               className="col-sm-6 mb-3 mb-sm-0"
-              style={{ width: "300px" }}
+              style={{ width: "350px" }}
             >
               <div className="card">
                 <div className="card-body">
