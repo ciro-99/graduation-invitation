@@ -84,7 +84,7 @@ function App() {
                     <div className="icon-wrapper">
                       <img
                         className="icon"
-                        src="src/assets/cappello.svg"
+                        src="https://svgshare.com/i/14FN.svg"
                         style={{
                           transform: "rotate(75deg)",
                         }}
