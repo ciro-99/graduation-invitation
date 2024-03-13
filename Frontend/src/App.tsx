@@ -8,6 +8,7 @@ import Card from "./components/Card";
 import Countdown from "./components/Countdown";
 import { Player } from "@lottiefiles/react-lottie-player";
 import CardGuests from "./components/CardGuests";
+import location from "../src/assets/location.jpg";
 
 interface CardsOpenState {
   countdown: boolean;
@@ -142,7 +143,7 @@ function App() {
                 text="Villa Andrea di Isernia - Via San Vito, 190, 80056 Ercolano NA"
                 buttonText="Indicazioni"
                 href="https://maps.app.goo.gl/rvCPn9og6tWudtyq6"
-                srcImg="/src/assets/location.jpg"
+                srcImg={location}
                 icon="FaMapSigns"
                 isOpen={cardsOpen.location}
               />
