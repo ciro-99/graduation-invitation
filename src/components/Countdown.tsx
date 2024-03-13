@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import "../styles/styles.css";
 
-const COUNTDOWN_TARGET = new Date("2024-03-29T23:59:59");
+const COUNTDOWN_TARGET = new Date("2024-03-29T23:59:59").getTime();
 
 const getTimeLeft = () => {
-  const totalTimeLeft = COUNTDOWN_TARGET - new Date();
+  const totalTimeLeft = COUNTDOWN_TARGET - new Date().getTime();
   const giorni = Math.floor(totalTimeLeft / (1000 * 60 * 60 * 24));
   const ore = Math.floor((totalTimeLeft / (1000 * 60 * 60)) % 24);
   const minuti = Math.floor((totalTimeLeft / (1000 * 60)) % 60);
