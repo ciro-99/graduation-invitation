@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Whisper&display=swap');
+
+@media only screen and (max-width: 370px) {
+  .icon {
+    width: 50px;
+  }
+}
+
+@media only screen and (min-width: 370px) and (max-width: 400px) {
+  .icon {
+    width: 70px;
+  }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 600px) {
+  .icon {
+    width: 80px;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+  .icon {
+    width: 90px;
+  }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1200px) {
+  .icon {
+    width: 90px;
+  }
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.whisper-regular {
+  font-family: "Whisper", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 50px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Aggiungi stili per la classe di animazione fade-in */
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.fade-in-2 {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.fade-in-3 {
+  animation: fadeIn 3s ease-in-out;
+}
+
+.fade-in-5 {
+  animation: fadeIn 5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 1s ease-in-out;
+}
+
+.fade-out-2 {
+  animation: fadeOut 2s ease-in-out;
+}
+
+.fade-out-3 {
+  animation: fadeOut 3s ease-in-out;
+}
+
+.fade-out-4 {
+  animation: fadeOut 4s ease-in-out;
+}
+
+.fade-out-5 {
+  animation: fadeOut 5s ease-in-out;
+}
+
+.fade-out-6 {
+  animation: fadeOut 6s ease-in-out;
+}
+
+.fade-out-10 {
+  animation: fadeOut 10s ease-in-out;
+}
+
+.fade-in-out {
+  animation: fadeInOut 8s infinite;
+}
+
+@keyframes fadeInOut {
+  0% {
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
+
+.zoom-out {
+  animation: zoomOut 0.5s ease;
+}
+
+@keyframes zoomOut {
+  from {
+    scale: 3;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+/* Aggiungi stili per la classe di animazione quando è completata */
+.animation-done {
+  animation: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

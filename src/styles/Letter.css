@@ -1,0 +1,7 @@
+.letter-container {
+    transition: opacity 0.5s ease;
+}
+
+.letter-container.clicked {
+    opacity: 0;
+}
