@@ -76,7 +76,7 @@ function App() {
                     🥳 Festa di Laurea
                   </h5>
                   <h6
-                    className="card-subtitle mb-2 text-body-secondary text-start"
+                    className="card-subtitle mb-2 text-body-secondary text-start mt-2"
                     style={{ width: "200px" }}
                   >
                     Laurea Magistrale in Ingegneria Informatica
@@ -111,7 +111,7 @@ function App() {
                     ⌚️ Quando?
                   </h5>
                   {cardsOpen.countdown && (
-                    <p className="card-text text-start">
+                    <p className="card-text text-start mt-2">
                       30 Marzo 2024, ore 13:30
                     </p>
                   )}

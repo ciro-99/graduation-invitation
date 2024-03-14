@@ -110,7 +110,7 @@ const CardGuests = ({
             <div
               className={`letter-container badge text-bg-warning text-wrap p-2 mt-2`}
             >
-              Da confermare: {toConfirmCount}
+              ✍🏻 Da confermare: {toConfirmCount}
             </div>
             <Guests guests={guests} handleUpdate={handleUpdate} />
           </>

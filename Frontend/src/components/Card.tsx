@@ -30,7 +30,7 @@ const Card = ({
         <h5 className="card-title">{title}</h5>
         {isOpen && (
           <>
-            <p className="card-text">{text}</p>
+            <p className="card-text mt-2">{text}</p>
             <h6 className="card-subtitle mb-2 text-body-secondary">
               {subText}
             </h6>
