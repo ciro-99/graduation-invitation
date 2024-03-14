@@ -45,9 +45,10 @@ const Guests = ({ guests, handleUpdate }: Props) => {
           <li
             key={index}
             className="list-group-item d-flex justify-content-between align-items-center"
+            style={{ fontSize: "15px" }}
           >
             {invitato.name}
-            <div className="justify-content-md-end">
+            <div className="d-flex justify-content-md-end">
               <button
                 className={`btn me-2 me-md-2 ${
                   invitato.participate === true
