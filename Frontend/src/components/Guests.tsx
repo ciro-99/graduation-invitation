@@ -38,6 +38,10 @@ const Guests = ({ guests, handleUpdate }: Props) => {
   //     .catch((error) => console.error(error));
   // }, []);
 
+  // const sortedInvitati = [...invitati].sort((a, b) =>
+  //   a.name.localeCompare(b.name)
+  // );
+
   return (
     <div>
       <ul className="list-group mt-3">
@@ -48,7 +52,7 @@ const Guests = ({ guests, handleUpdate }: Props) => {
             style={{ fontSize: "15px" }}
           >
             {invitato.name}
-            <div className="d-flex justify-content-md-end">
+            <div className="ms-2 d-flex justify-content-md-end">
               <button
                 className={`btn me-2 me-md-2 ${
                   invitato.participate === true

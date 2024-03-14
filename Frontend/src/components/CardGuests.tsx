@@ -35,6 +35,7 @@ const CardGuests = ({
   const [guests, setGuests] = useState<Guest[]>([]);
   const [participateTrueCount, setParticipateTrueCount] = useState<number>(0);
   const [participateFalseCount, setParticipateFalseCount] = useState<number>(0);
+  const [toConfirmCount, setToConfirmCount] = useState<number>(0);
 
   const handleUpdate = () => {
     axios
@@ -58,9 +59,14 @@ const CardGuests = ({
       setParticipateTrueCount(participateTrue);
 
       const participateFalse = guests.filter(
-        (guest) => !guest.participate
+        (guest) => guest.participate === false
       ).length;
       setParticipateFalseCount(participateFalse);
+
+      const toConfirm = guests.filter(
+        (guest) => guest.participate === null
+      ).length;
+      setToConfirmCount(toConfirm);
     };
 
     countParticipate();
@@ -93,13 +99,18 @@ const CardGuests = ({
               <div
                 className={`letter-container badge text-bg-primary text-wrap p-2`}
               >
-                🥳 Ci sono: {participateTrueCount}
+                🥳 Presenti: {participateTrueCount}
               </div>
               <div
                 className={`letter-container badge text-bg-danger text-wrap p-2 mx-2`}
               >
-                🥲 Non ci sono: {participateFalseCount}
+                🥲 Assenti: {participateFalseCount}
               </div>
+            </div>
+            <div
+              className={`letter-container badge text-bg-warning text-wrap p-2 mt-2`}
+            >
+              Da confermare: {toConfirmCount}
             </div>
             <Guests guests={guests} handleUpdate={handleUpdate} />
           </>
