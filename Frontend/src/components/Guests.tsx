@@ -45,6 +45,12 @@ const Guests = ({ guests, handleUpdate }: Props) => {
   return (
     <div>
       <ul className="list-group mt-3">
+        <div
+          style={{ fontSize: "12px" }}
+          className="list-group-item d-flex justify-content-center align-items-center"
+        >
+          <strong>Conferma la tua presenza!</strong>
+        </div>
         {invitati.map((invitato, index) => (
           <li
             key={index}
@@ -77,7 +83,7 @@ const Guests = ({ guests, handleUpdate }: Props) => {
                   togglePartecipa(invitato._id, false);
                 }}
               >
-                👎🏻
+                👎🏼
               </button>
             </div>
           </li>

@@ -6,7 +6,7 @@ interface Props {
   title: string;
   text?: string;
   subText?: string;
-  buttonText: string;
+  buttonText?: string;
   href: string;
   srcImg?: string;
   icon?: string;

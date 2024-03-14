@@ -15,7 +15,7 @@ interface Props {
   title: string;
   text?: string;
   subText?: string;
-  buttonText: string;
+  buttonText?: string;
   href?: string;
   srcImg?: string;
   icon?: string;
@@ -83,18 +83,20 @@ const CardGuests = ({
             <h6 className="card-subtitle mb-2 text-body-secondary">
               {subText}
             </h6>
-            <a
-              href={href}
-              target="_blank"
-              className="btn"
-              style={{ color: "white", backgroundColor: "#872929" }}
-            >
-              {icon == "FaMapSigns" && <FaMapSigns className="me-2" />}
-              {icon == "IoMdPersonAdd" && (
-                <IoMdPersonAdd className={`${buttonText ? "me-2" : ""}`} />
-              )}
-              {buttonText}
-            </a>
+            {icon && (
+              <a
+                href={href}
+                target="_blank"
+                className="btn"
+                style={{ color: "white", backgroundColor: "#872929" }}
+              >
+                {icon == "FaMapSigns" && <FaMapSigns className="me-2" />}
+                {icon == "IoMdPersonAdd" && (
+                  <IoMdPersonAdd className={`${buttonText ? "me-2" : ""}`} />
+                )}
+                {buttonText}
+              </a>
+            )}
             <div className="list-group-item d-flex justify-content-start align-items-center mt-2">
               <div
                 className={`letter-container badge text-bg-primary text-wrap p-2`}

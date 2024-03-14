@@ -156,8 +156,6 @@ function App() {
               <CardGuests
                 title="🌝 Invitati"
                 text=""
-                buttonText="Conferma la tua presenza!"
-                icon="IoMdPersonAdd"
                 isOpen={cardsOpen.invitati}
               />
             </div>
