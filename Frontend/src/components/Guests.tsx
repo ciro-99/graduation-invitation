@@ -16,14 +16,14 @@ interface Props {
 const Guests = ({ guests, handleUpdate }: Props) => {
   const [invitati, setInvitati] = useState<Guest[]>(guests);
 
+  const gcpEndpoint = "https://graduation-project-417210.ew.r.appspot.com";
+  //const renderEndpoint = "https://graduation-invitation-backend.onrender.com/";
+
   const togglePartecipa = async (id: string, participate: boolean) => {
     try {
-      const response = await axios.put(
-        `https://graduation-invitation-backend.onrender.com/update/${id}`,
-        {
-          participate,
-        }
-      );
+      const response = await axios.put(gcpEndpoint + `/update/${id}`, {
+        participate,
+      });
       const updatedInvitati = response.data;
       setInvitati(updatedInvitati);
       handleUpdate();

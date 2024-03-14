@@ -37,16 +37,19 @@ const CardGuests = ({
   const [participateFalseCount, setParticipateFalseCount] = useState<number>(0);
   const [toConfirmCount, setToConfirmCount] = useState<number>(0);
 
+  const gcpEndpoint = "https://graduation-project-417210.ew.r.appspot.com";
+  //const renderEndpoint = "https://graduation-invitation-backend.onrender.com/";
+
   const handleUpdate = () => {
     axios
-      .get<Guest[]>("https://graduation-invitation-backend.onrender.com/")
+      .get<Guest[]>(gcpEndpoint)
       .then((response) => setGuests(response.data))
       .catch((error) => console.error(error));
   };
 
   useEffect(() => {
     axios
-      .get<Guest[]>("https://graduation-invitation-backend.onrender.com/")
+      .get<Guest[]>(gcpEndpoint)
       .then((response) => setGuests(response.data))
       .catch((error) => console.error(error));
   }, []);
