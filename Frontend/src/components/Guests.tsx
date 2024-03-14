@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState } from "react";
+import { IoMdPersonAdd } from "react-icons/io";
 
 interface Guest {
   _id: string;
@@ -49,6 +50,7 @@ const Guests = ({ guests, handleUpdate }: Props) => {
           style={{ fontSize: "12px" }}
           className="list-group-item d-flex justify-content-center align-items-center"
         >
+          <IoMdPersonAdd className={"me-2"} />
           <strong>Conferma la tua presenza!</strong>
         </div>
         {invitati.map((invitato, index) => (
